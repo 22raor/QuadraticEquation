@@ -53,12 +53,18 @@ private Quadratic quad = new Quadratic();
 	private class ButtonHandler implements ActionListener{
 		public void actionPerformed(ActionEvent event) {
 			
+			try {
 		
 			quad.setA(Double.parseDouble(a.getText()));
 			quad.setB(Double.parseDouble(b.getText()));
 			quad.setC(Double.parseDouble(c.getText()));
 				solutions1 = quad.getSolutions();
 			JOptionPane.showMessageDialog(null, solutions1);
+			
+			} catch (Exception e) {
+				
+				JOptionPane.showMessageDialog(null, "Please enter legit numbers");
+			}
 			
 			
 			
